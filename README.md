@@ -27,16 +27,15 @@ This project allows you to send emails automatically through the Gmail API using
 GMAIL_CREDENTIALS_PATH=/absolute/path/to/credentials.json
 GMAIL_TOKEN_PATH=/absolute/path/to/token.json
 
-
 4. Install dependencies
 
 ```bash
-pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client python-dotenv
+poetry install
 ```
 
 5. Run the script
 ```bash
-python send_email.py
+poetry run python email_sender.py
 ```
 
 The browser will open for authentication the first time you run it.
