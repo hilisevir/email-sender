@@ -24,4 +24,4 @@ def send_email(destination: str, content: str, subject: str):
 
 
 if __name__ == '__main__':
-    send_email("alnossov231@gmail.com", "Hello! This is a test email sent via the Gmail API.", "Automated email")
+    send_email("<youremail>@gmail.com", "Hello! This is a test email sent via the Gmail API.", "Automated email")
