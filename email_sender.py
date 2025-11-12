@@ -3,13 +3,13 @@ from email.mime.text import MIMEText
 from gmail_service import gmail_service
 
 
-def send_email(destination: str, content: str):
+def send_email(destination: str, content: str, subject: str):
     service = gmail_service()
 
     # сreate a plain text message
     message = MIMEText(content)
     message['to'] = destination
-    message['subject'] = 'Automated message'
+    message['subject'] = subject
     raw = base64.urlsafe_b64encode(message.as_bytes()).decode()
 
     try:
@@ -24,4 +24,4 @@ def send_email(destination: str, content: str):
 
 
 if __name__ == '__main__':
-    send_email("<youremail>@gmail.com", "Hello! This is a test email sent via the Gmail API.")
+    send_email("alnossov231@gmail.com", "Hello! This is a test email sent via the Gmail API.", "Automated email")
